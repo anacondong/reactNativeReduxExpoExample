@@ -9,6 +9,8 @@ import HeaderButton from '../components/HeaderButton';
 import { CATEGORIES } from '../data/dummy-data';
 import CategoryGridTile from '../components/CategoryGridTile';
 
+
+// Home page CategoriesScreen > lists of Categories
 const CategoriesScreen = props => {
   const renderGridItem = itemData => {
     return (
@@ -37,6 +39,7 @@ const CategoriesScreen = props => {
   );
 };
 
+// Header Title navigationOptions
 CategoriesScreen.navigationOptions = navData => {
   return {
     headerTitle: 'Meal Categories',

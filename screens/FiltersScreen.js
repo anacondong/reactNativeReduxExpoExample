@@ -7,6 +7,7 @@ import HeaderButton from '../components/HeaderButton';
 import Colors from '../constants/Colors';
 import { setFilters } from '../store/actions/meals';
 
+// FiltersScreen from hamburger menu
 const FilterSwitch = props => {
   return (
     <View style={styles.filterContainer}>
@@ -24,10 +25,12 @@ const FilterSwitch = props => {
 const FiltersScreen = props => {
   const { navigation } = props;
 
-  const [isGlutenFree, setIsGlutenFree] = useState(false);
+  // using react state
+  const [isGlutenFree, setIsGlutenFree] = useState(false); // defult
   const [isLactoseFree, setIsLactoseFree] = useState(false);
   const [isVegan, setIsVegan] = useState(false);
   const [isVegetarian, setIsVegetarian] = useState(false);
+
 
   const dispatch = useDispatch();
 
@@ -42,6 +45,8 @@ const FiltersScreen = props => {
     dispatch(setFilters(appliedFilters));
   }, [isGlutenFree, isLactoseFree, isVegan, isVegetarian, dispatch]);
 
+
+  // using useEffect to update Reducer
   useEffect(() => {
     navigation.setParams({ save: saveFilters });
   }, [saveFilters]);
@@ -73,6 +78,7 @@ const FiltersScreen = props => {
   );
 };
 
+// header navigation
 FiltersScreen.navigationOptions = navData => {
   return {
     headerTitle: 'Filter Meals',

@@ -57,6 +57,18 @@ const FavNavigator = createStackNavigator(
   }
 );
 
+const FiltersNavigator = createStackNavigator(
+  {
+    Filters: FiltersScreen
+  },
+  {
+    // navigationOptions: {
+    //   drawerLabel: 'Filters!!!!'
+    // },
+    defaultNavigationOptions: defaultStackNavOptions
+  }
+);
+
 const tabScreenConfig = {
   Meals: {
     screen: MealsNavigator,
@@ -110,17 +122,7 @@ const MealsFavTabNavigator =
         }
       });
 
-const FiltersNavigator = createStackNavigator(
-  {
-    Filters: FiltersScreen
-  },
-  {
-    // navigationOptions: {
-    //   drawerLabel: 'Filters!!!!'
-    // },
-    defaultNavigationOptions: defaultStackNavOptions
-  }
-);
+
 
 const MainNavigator = createDrawerNavigator(
   {

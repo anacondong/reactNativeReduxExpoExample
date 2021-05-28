@@ -7,6 +7,7 @@ import HeaderButton from '../components/HeaderButton';
 import MealList from '../components/MealList';
 import DefaultText from '../components/DefaultText';
 
+// fav screen
 const FavoritesScreen = props => {
   const favMeals = useSelector(state => state.meals.favoriteMeals);
 

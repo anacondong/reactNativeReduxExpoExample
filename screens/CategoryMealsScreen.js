@@ -6,6 +6,7 @@ import { CATEGORIES } from '../data/dummy-data';
 import MealList from '../components/MealList';
 import DefaultText from '../components/DefaultText';
 
+//CategoryMealScreen > lists of Meal
 const CategoryMealScreen = props => {
   const catId = props.navigation.getParam('categoryId');
 
@@ -25,6 +26,7 @@ const CategoryMealScreen = props => {
 
   return <MealList listData={displayedMeals} navigation={props.navigation} />;
 };
+
 
 CategoryMealScreen.navigationOptions = navigationData => {
   const catId = navigationData.navigation.getParam('categoryId');

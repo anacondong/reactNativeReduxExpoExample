@@ -7,6 +7,8 @@ import HeaderButton from '../components/HeaderButton';
 import DefaultText from '../components/DefaultText';
 import { toggleFavorite } from '../store/actions/meals';
 
+
+// Meal Detail Screen
 const ListItem = props => {
   return (
     <View style={styles.listItem}>

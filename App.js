@@ -11,12 +11,16 @@ import mealsReducer from './store/reducers/meals';
 
 useScreens();
 
+// conbineReducers
 const rootReducer = combineReducers({
   meals: mealsReducer
+  // add reducer here
 });
 
+// create store
 const store = createStore(rootReducer);
 
+// load fonts
 const fetchFonts = () => {
   return Font.loadAsync({
     'open-sans': require('./assets/fonts/OpenSans-Regular.ttf'),
@@ -25,6 +29,7 @@ const fetchFonts = () => {
 };
 
 export default function App() {
+  // use react state not redux
   const [fontLoaded, setFontLoaded] = useState(false);
 
   if (!fontLoaded) {
